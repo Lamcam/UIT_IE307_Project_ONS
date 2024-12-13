@@ -44,7 +44,7 @@ export default function Vouchers() {
   useEffect(() => {
     if (user_id) {
       axios
-        .get(`${API_URL}/user/${user_id}/vouchers`)
+        .get(`${API_URL}/auth/user/${user_id}/vouchers`)
         .then((response) => {
           console.log('Dữ liệu trả về từ API:', response.data);
           setMyVoucher(response.data.vouchers);

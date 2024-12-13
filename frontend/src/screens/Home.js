@@ -39,7 +39,7 @@ export default function Home() {
     console.log("home api",`${API_URL}`)
     console.log(user)
     axios
-      .get(`${API_URL}/products/categories`, {
+      .get(`${API_URL}/products/tam`, {
         headers: {
           'Content-Type': 'application/json',
         },

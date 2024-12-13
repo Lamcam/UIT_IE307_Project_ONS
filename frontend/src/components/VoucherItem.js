@@ -13,7 +13,7 @@ const Voucher = ({ data, isSaved, onSave }) => {
         if (!isSaved) {
             try {
                 await axios.post(
-                    `${API_URL}/users/vouchers`,
+                    `${API_URL}/auth/users/vouchers`,
                     {
                         user_id: user_id,
                         voucher_id: data._id,

@@ -27,7 +27,7 @@ export const AuthContextProvider = ({ children }) => {
         if (!user || !user[0]._id) return user; 
         const id=user[0]._id
         try {
-            const response = await fetch(`${API_URL}/users/${id}`);
+            const response = await fetch(`${API_URL}/auth/users/${id}`);
             if (!response.ok) {
                 console.warn(`API không phản hồi đúng: ${response.status}`);
                 return user; // Giữ nguyên thông tin cũ nếu lỗi
