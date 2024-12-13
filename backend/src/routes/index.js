@@ -15,7 +15,7 @@ const route = (app) => {
   app.use("/api/orders", order);
   app.use("/api/vouchers", voucher)
   app.use("/api/notifications", notification)
-  app.use("/api/api/chat", chat)
+  app.use("/api/chat", chat)
 };
 
 module.exports = route;
