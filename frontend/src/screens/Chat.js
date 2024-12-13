@@ -18,7 +18,7 @@ const ChatWithBotScreen = () => {
       // Lấy lịch sử tin nhắn khi người dùng đăng nhập
       const fetchMessages = async () => {
         try {
-          const response = await axios.get(`${API_URL}/api/chat/messages/${user_id}`);
+          const response = await axios.get(`${API_URL}/chat/messages/${user_id}`);
 
           // Trích xuất chỉ nội dung tin nhắn
           const messageData = response.data.map((msg) => ({
@@ -54,7 +54,7 @@ const ChatWithBotScreen = () => {
       setLoading(true);
 
       // Gửi yêu cầu POST tới API, bao gồm sender và các thông tin khác
-      const response = await axios.post(`${API_URL}/api/chat/message`, {
+      const response = await axios.post(`${API_URL}/chat/message`, {
         message,
         userId: user_id, // Gửi userId của người dùng
         sender: "user", // Xác định người gửi là user
