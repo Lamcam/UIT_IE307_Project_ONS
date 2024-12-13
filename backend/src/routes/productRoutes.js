@@ -5,6 +5,7 @@ const product = require('../controllers/productController')
 
 router.post('/categories',product.postCategories)
 router.get('/categories', product.getAllCategories)
+router.get('/tam', product.getAllCategories)
 router.post('/',product.postProduct)
 router.get('/', product.getAllProduct)
 router.put('/:product_id', product.updateProduct)
