@@ -9,7 +9,7 @@ const chat = require("./chatRoutes")
 
 const route = (app) => {
   app.use("/api/products", product);
-  app.use("/api", auth);
+  app.use("/api/auth", auth);
   app.use("/api/accounts", account);
   app.use("/api/carts", cart);
   app.use("/api/orders", order);
